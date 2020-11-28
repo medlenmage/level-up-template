@@ -7,21 +7,23 @@ import { EventList } from './event/EventList'
 
 export const ApplicationViews = () => {
     return <>
-        <GameProvider>
-            <Route exact path="/">
-                <GameList />
-            </Route>
-        </GameProvider>
-        <EventProvider>
-            <Route exact path="/events">
-                <EventList />
-            </Route>
-        </EventProvider>
-        {/* <main style={{
+        <main style={{
             margin: "5rem 2rem",
             backgroundColor: "lightgoldenrodyellow"
         }}>
-            Application views
-        </main> */}
+            <GameProvider>
+                <Route exact path="/" render={ props => <GameList {...props}/>} />
+                    
+                <Route exact path="/games/new" render={props => <GameForm {...props} />} />
+
+                <EventProvider>
+                    <Route exact path="/events">
+                        <EventList />
+                    </Route>
+
+                    <Route exact path="/events/new" render={props => <EventForm {...props} />} />
+                </EventProvider>
+            </GameProvider>
+        </main>
     </>
 }
