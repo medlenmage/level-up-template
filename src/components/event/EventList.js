@@ -27,13 +27,12 @@ export const EventList = (props) => {
                                     month: 'long',
                                     day: 'numeric'
                                 })
-                              }
-                                @ {event.time}
-                            
+                            }
+                            @ {event.time}
                         </div>
                     </section>
                 })
             }
-        </article >
+        </article>
     )
 }
