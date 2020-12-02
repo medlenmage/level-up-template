@@ -4,6 +4,8 @@ import { GameProvider } from "./game/GameProvider"
 import { GameList } from "./game/GameList"
 import { EventProvider } from './event/EventProvider'
 import { EventList } from './event/EventList'
+import { GameForm } from './game/GameForm'
+import { EventForm } from './event/EventForm'
 
 export const ApplicationViews = () => {
     return <>
