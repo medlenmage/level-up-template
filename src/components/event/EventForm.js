@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react"
-import { GameContext } from '../games/GameProvider'
+import { GameContext } from '../game/GameProvider'
 import { EventContext } from './EventProvider'
 
 
